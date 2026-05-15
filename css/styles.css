@@ -307,3 +307,30 @@ body {
     background-color: var(--vinotinto);
     color: var(--crema);
 }
+
+/* =========================================
+   SECCIÓN KIDS
+========================================== */
+.kids-info-box {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+}
+
+.kids-texto h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--vinotinto);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.titulo-sub-seccion {
+    font-family: var(--fuente-titulos);
+    color: var(--gris-oscuro);
+    font-size: 2rem;
+    margin-top: 20px;
+}

@@ -23,7 +23,7 @@
         <ul class="nav-links">
             <!-- Los 'li' necesitan la clase 'nav-item' para que el JS los encuentre -->
             <li class="nav-item activo" onclick="cambiarPestana('inicio')"><a>Inicio</a></li>
-            <li class="nav-item" onclick="cambiarPestana('modelos')"><a>Comités</a></li>
+            <li class="nav-item" onclick="cambiarPestana('comites')"><a>Comités</a></li>
             <li class="nav-item" onclick="cambiarPestana('kids')"><a>Kids</a></li>
             <li class="nav-item" onclick="cambiarPestana('nosotros')"><a>Nosotros</a></li>
             <li class="nav-item" onclick="cambiarPestana('biblioteca')"><a>Biblioteca</a></li>
@@ -40,7 +40,7 @@
             <div class="hero">
                 <h1>Agentes del Cambio</h1>
                 <p class="tagline">Formando líderes del mañana a través del debate, la diplomacia y la resolución de conflictos.</p>
-                <button class="btn-primario" onclick="cambiarPestana('modelos')">Ver Comités</button>
+                <button class="btn-primario" onclick="cambiarPestana('comites')">Ver Comités</button>
             </div>
         <!-- ticker de patrocinantes en el inicio -->
         <div class="patrocinantes-wrapper">
@@ -78,8 +78,8 @@
                 </div>
             </div>
         </section>
-        <!-- VISTA: MODELOS -->
-        <section id="modelos" class="vista oculto">
+        <!-- VISTA: COMITÉS -->
+        <section id="comites" class="vista oculto">
             <div class="contenido-interno">
                 <h2 class="titulo-seccion">I Edición: Comités</h2>
                 <p class="tagline" style="margin: 0 auto 40px auto;">Conoce los espacios de debate donde nuestros delegados pondrán a prueba sus habilidades de negociación.</p>
@@ -87,37 +87,120 @@
                 <div class="grid-comites">
                     <!-- TARJETA 1 -->
                     <div class="tarjeta-comite">
-                        <!-- El color de fondo de la cabecera puede variar según el comité -->
-                        <div class="tarjeta-cabecera" style="background-color: #1E3A8A;">
-                            <h3>OMS</h3>
+                        <div class="tarjeta-cabecera" style="background-color: var(--vinotinto);">
+                            <h3>BIOÉTICA</h3>
                         </div>
                         <div class="tarjeta-cuerpo">
-                            <h4>Organización Mundial de la Salud</h4>
-                            <p>Bioética y regulaciones globales sobre la edición genética en humanos.</p>
+                            <h4>Comité de Bioética</h4>
+                            <p><strong>Tópico:</strong> Creación de Órganos.</p>
                             <button class="btn-secundario">Ver Matriz</button>
                         </div>
                     </div>
 
                     <!-- TARJETA 2 -->
                     <div class="tarjeta-comite">
-                        <div class="tarjeta-cabecera" style="background-color: #E11D48;">
+                        <div class="tarjeta-cabecera" style="background-color: var(--vinotinto);">
                             <h3>ONU MUJERES</h3>
                         </div>
                         <div class="tarjeta-cuerpo">
-                            <h4>Entidad de la ONU para la Igualdad de Género</h4>
-                            <p>Estrategias para la erradicación de la brecha salarial y empoderamiento económico.</p>
+                            <h4>1985 (Histórico)</h4>
+                            <p><strong>Tópico:</strong> De la Segunda a la Tercera Revolución Industrial: un Impacto en la vida de la mujer.</p>
                             <button class="btn-secundario">Ver Matriz</button>
                         </div>
                     </div>
 
-                    <!-- TARJETA 3 (Puedes copiar y pegar para agregar más) -->
+                    <!-- TARJETA 3 -->
                     <div class="tarjeta-comite">
-                        <div class="tarjeta-cabecera" style="background-color: #047857;">
-                            <h3>PNUMA</h3>
+                        <div class="tarjeta-cabecera" style="background-color: var(--vinotinto);">
+                            <h3>UNESCO</h3>
                         </div>
                         <div class="tarjeta-cuerpo">
-                            <h4>Programa de las Naciones Unidas para el Medio Ambiente</h4>
-                            <p>Transición energética y mitigación del impacto del cambio climático en vías de desarrollo.</p>
+                            <h4>Comité Kids</h4>
+                            <p><strong>Tópico:</strong> Plan de Reforma del Sistema Educativo Escolar en Latinoamérica.</p>
+                            <button class="btn-secundario">Ver Matriz</button>
+                        </div>
+                    </div>
+
+                    <!-- TARJETA 4 -->
+                    <div class="tarjeta-comite">
+                        <div class="tarjeta-cabecera" style="background-color: var(--vinotinto);">
+                            <h3>FBI</h3>
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h4>Comité de Investigación</h4>
+                            <p><strong>Caso:</strong> El Escape de Alcatraz de 1962.</p>
+                            <button class="btn-secundario">Ver Matriz</button>
+                        </div>
+                    </div>
+
+                    <!-- TARJETA 5 -->
+                    <div class="tarjeta-comite">
+                        <div class="tarjeta-cabecera" style="background-color: var(--vinotinto);">
+                            <h3>USA CONGRESS</h3>
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h4>Comité en Inglés (2017)</h4>
+                            <p><strong>Tópico:</strong> Caso Hipotético - Mandato de Hillary Clinton.</p>
+                            <button class="btn-secundario">Ver Matriz</button>
+                        </div>
+                    </div>
+
+                    <!-- TARJETA 6 -->
+                    <div class="tarjeta-comite">
+                        <div class="tarjeta-cabecera" style="background-color: var(--vinotinto);">
+                            <h3>MISS UNIVERSE</h3>
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h4>Corte Miss Universe</h4>
+                            <p><strong>Tópico:</strong> Caso de Raúl Rocha.</p>
+                            <button class="btn-secundario">Ver Matriz</button>
+                        </div>
+                    </div>
+
+                    <!-- TARJETA 7 (CRISIS A) -->
+                    <div class="tarjeta-comite">
+                        <div class="tarjeta-cabecera" style="background-color: var(--vinotinto);">
+                            <h3 style="font-size: 1.5rem; text-align: center;">IGLESIA CATÓLICA</h3>
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h4>Crisis Tricameral (Cámara A)</h4>
+                            <p><strong>Tópico:</strong> La Reforma Protestante.</p>
+                            <button class="btn-secundario">Ver Matriz</button>
+                        </div>
+                    </div>
+
+                    <!-- TARJETA 8 (CRISIS B) -->
+                    <div class="tarjeta-comite">
+                        <div class="tarjeta-cabecera" style="background-color: var(--vinotinto);">
+                            <h3 style="font-size: 1.5rem; text-align: center;">IGLESIA LUTERANA</h3>
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h4>Crisis Tricameral (Cámara B)</h4>
+                            <p><strong>Tópico:</strong> La Reforma Protestante.</p>
+                            <button class="btn-secundario">Ver Matriz</button>
+                        </div>
+                    </div>
+
+                    <!-- TARJETA 9 (CRISIS C) -->
+                    <div class="tarjeta-comite">
+                        <div class="tarjeta-cabecera" style="background-color: var(--vinotinto);">
+                            <h3 style="font-size: 1.5rem; text-align: center;">IGLESIA ANGLICANA</h3>
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h4>Crisis Tricameral (Cámara C)</h4>
+                            <p><strong>Tópico:</strong> La Reforma Protestante.</p>
+                            <button class="btn-secundario">Ver Matriz</button>
+                        </div>
+                    </div>
+
+                    <!-- TARJETA 10 -->
+                    <div class="tarjeta-comite">
+                        <div class="tarjeta-cabecera" style="background-color: var(--vinotinto);">
+                            <h3>PRENSA</h3>
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h4>Cuerpo de Prensa</h4>
+                            <p><strong>Misión:</strong> Cobertura General del Modelo.</p>
                             <button class="btn-secundario">Ver Matriz</button>
                         </div>
                     </div>
@@ -130,7 +213,29 @@
         <section id="kids" class="vista oculto">
             <div class="contenido-interno">
                 <h2 class="titulo-seccion">CLFMUN Kids</h2>
-                <p>Información dedicada a la formación de las delegadas más pequeñas.</p>
+                <p class="tagline" style="margin: 0 auto 40px auto;">Sembrando la semilla del liderazgo y la diplomacia en nuestras delegadas más jóvenes.</p>
+                
+                <div class="kids-info-box">
+                    <div class="kids-texto">
+                        <h3>¿Qué es CLFMUN Kids?</h3>
+                        <p>Es un espacio diseñado exclusivamente para introducir a las alumnas de grados menores al mundo del Modelo de Naciones Unidas. A través de dinámicas adaptadas y un acompañamiento académico cercano, desarrollamos sus habilidades de oratoria, investigación, redacción y resolución de conflictos en un ambiente seguro y estimulante.</p>
+                        <button class="btn-secundario" style="margin-top: 25px;">Descargar Reglamento Kids</button>
+                    </div>
+                </div>
+
+                <h3 class="titulo-sub-seccion">Comité Asignado</h3>
+                <!-- Reutilizamos la grilla pero la limitamos para centrar una sola tarjeta -->
+                <div class="grid-comites" style="max-width: 400px; margin-top: 30px;">
+                    <div class="tarjeta-comite">
+                        <div class="tarjeta-cabecera" style="background-color: var(--vinotinto);">
+                            <h3>UNESCO</h3>
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h4>Comité Kids</h4>
+                            <p><strong>Tópico:</strong> Plan de Reforma del Sistema Educativo Escolar en Latinoamérica.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
