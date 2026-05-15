@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLFMUN | Colegio Las Fuentes</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="assets/img/delegacion-logo.png" alt="CLFMUN Logo" class="logo-nav">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="nav-item activo" onclick="cambiarPestana('inicio')">Inicio</a></li>
+            <li><a href="#" class="nav-item" onclick="cambiarPestana('modelos')">Modelos</a></li>
+            <li><a href="#" class="nav-item" onclick="cambiarPestana('kids')">Kids</a></li>
+            <li><a href="#" class="nav-item" onclick="cambiarPestana('nosotros')">Nosotros</a></li>
+        </ul>
+    </nav>
+
+    <main class="app-container">
+
+        <section id="inicio" class="vista">
+            <div class="hero">
+                <h1>Agentes del Cambio</h1>
+                <p class="tagline">Comunidad de líderes unidas por la excelencia, la ética y la vocación de servicio.</p>
+                <button class="btn-primario" onclick="cambiarPestana('modelos')">Ver I Edición</button>
+            </div>
+            
+            </section>
+
+        <section id="modelos" class="vista oculto">
+            <div class="contenido-interno">
+                <h2 class="titulo-seccion">I Edición CLFMUN</h2>
+                <p>Aquí construiremos las tarjetas de los Comités, Baremos y Matrices.</p>
+            </div>
+        </section>
+
+        <section id="kids" class="vista oculto">
+            <div class="contenido-interno">
+                <h2 class="titulo-seccion">Delegación Kids</h2>
+                <p>Información sobre formación y valores para las más pequeñas.</p>
+            </div>
+        </section>
+
+        <section id="nosotros" class="vista oculto">
+            <div class="contenido-interno">
+                <h2 class="titulo-seccion">Nuestro Staff</h2>
+                <p>Aquí presentaremos a María Claudia, María Gracia y todo el equipo.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

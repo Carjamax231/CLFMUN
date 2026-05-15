@@ -1,0 +1,136 @@
+/* VARIABLES GLOBALES (Nuestra Paleta "Aesthetic") */
+:root {
+    --crema: #FAF5ED;
+    --vinotinto: #880908;
+    --gris-oscuro: #2c2c2c;
+    --fuente-titulos: 'Playfair Display', serif;
+    --fuente-textos: 'Montserrat', sans-serif;
+}
+
+/* RESETEO BÁSICO */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--crema);
+    color: var(--gris-oscuro);
+    font-family: var(--fuente-textos);
+    line-height: 1.6;
+}
+
+/* =========================================
+   SISTEMA SPA (LA MAGIA DE OCULTAR/MOSTRAR)
+========================================== */
+.vista {
+    /* Animación suave al aparecer */
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.oculto {
+    display: none !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   NAVEGACIÓN (ESTILO REFINADO)
+========================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(136, 9, 8, 0.05); /* Sombra súper suave */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-nav {
+    height: 60px; /* Ajusta según el tamaño de tu logo png */
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--gris-oscuro);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.activo {
+    color: var(--vinotinto);
+}
+
+/* =========================================
+   PORTADA (HERO)
+========================================== */
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-family: var(--fuente-titulos);
+    color: var(--vinotinto);
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+/* BOTÓN "AESTHETIC" */
+.btn-primario {
+    background-color: var(--vinotinto);
+    color: var(--crema);
+    border: none;
+    padding: 15px 35px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--fuente-textos);
+    border-radius: 30px; /* Bordes bien redondeados */
+    cursor: pointer;
+    box-shadow: 0px 10px 20px rgba(136, 9, 8, 0.2); /* Sombra flotante */
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primario:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 15px 25px rgba(136, 9, 8, 0.3);
+}
+
+.contenido-interno {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.titulo-seccion {
+    font-family: var(--fuente-titulos);
+    color: var(--vinotinto);
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
