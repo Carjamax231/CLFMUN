@@ -147,3 +147,19 @@ function volverAComites() {
     document.getElementById('comites').classList.remove('oculto');
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+/* =========================================
+   BARRA DE NAVEGACIÓN INTELIGENTE (SCROLL)
+========================================== */
+let ubicacionPrincipal = window.scrollY;
+window.addEventListener('scroll', function() {
+    let desplazamientoActual = window.scrollY;
+    // Mostramos la barra si el usuario desliza hacia ARRIBA o si está en el tope de la página
+    if (ubicacionPrincipal >= desplazamientoActual || desplazamientoActual < 50) {
+        document.querySelector('.navbar').classList.remove('navbar-oculta');
+    } else {
+        // Ocultamos la barra si desliza hacia ABAJO
+        document.querySelector('.navbar').classList.add('navbar-oculta');
+    }
+    ubicacionPrincipal = desplazamientoActual;
+});
