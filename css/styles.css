@@ -405,3 +405,34 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+.mesa-directiva-container {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px 30px;
+    border-radius: 15px;
+    border-left: 4px solid var(--vinotinto); /* Borde elegante a la izquierda */
+}
+
+.titulo-mesa {
+    font-family: var(--fuente-titulos);
+    color: var(--vinotinto);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.mesa-directiva-container ul {
+    list-style: none;
+}
+
+.mesa-directiva-container ul li {
+    font-size: 1.05rem;
+    color: var(--gris-oscuro);
+    margin-bottom: 8px;
+}
+
+.mesa-directiva-container ul li strong {
+    color: var(--vinotinto);
+    font-weight: 600;
+    margin-right: 5px;
+}
