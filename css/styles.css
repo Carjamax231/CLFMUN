@@ -436,3 +436,43 @@ body {
     font-weight: 600;
     margin-right: 5px;
 }
+
+/* =========================================
+   OPTIMIZACIÓN MÓVIL (RESPONSIVE DESIGN)
+========================================== */
+@media (max-width: 768px) {
+    /* 1. Ajuste de la barra de navegación */
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    /* 2. Reducción de Títulos Gigantes */
+    .titulo-seccion {
+        font-size: 2.2rem;
+    }
+    
+    .frase-celebre {
+        font-size: 1.5rem;
+    }
+
+    /* 3. Ajuste de contenedores e imágenes */
+    .detalle-imagen-placeholder {
+        height: 250px; /* Menos alto en celulares */
+    }
+
+    .kids-info-box {
+        padding: 25px; /* Evita que el texto quede pegado a los bordes */
+    }
+}
