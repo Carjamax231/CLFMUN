@@ -23,7 +23,7 @@
         <ul class="nav-links">
             <!-- Los 'li' necesitan la clase 'nav-item' para que el JS los encuentre -->
             <li class="nav-item activo" onclick="cambiarPestana('inicio')"><a>Inicio</a></li>
-            <li class="nav-item" onclick="cambiarPestana('modelos')"><a>Modelos</a></li>
+            <li class="nav-item" onclick="cambiarPestana('modelos')"><a>Comités</a></li>
             <li class="nav-item" onclick="cambiarPestana('kids')"><a>Kids</a></li>
             <li class="nav-item" onclick="cambiarPestana('nosotros')"><a>Nosotros</a></li>
             <li class="nav-item" onclick="cambiarPestana('biblioteca')"><a>Biblioteca</a></li>
@@ -82,8 +82,46 @@
         <section id="modelos" class="vista oculto">
             <div class="contenido-interno">
                 <h2 class="titulo-seccion">I Edición: Comités</h2>
-                <p>Aquí se mostrarán las tarjetas de los comités: Bioética, ONU Mujeres, etc.</p>
-                <!-- Próximamente: Tarjetas de comités -->
+                <p class="tagline" style="margin: 0 auto 40px auto;">Conoce los espacios de debate donde nuestros delegados pondrán a prueba sus habilidades de negociación.</p>
+                
+                <div class="grid-comites">
+                    <!-- TARJETA 1 -->
+                    <div class="tarjeta-comite">
+                        <!-- El color de fondo de la cabecera puede variar según el comité -->
+                        <div class="tarjeta-cabecera" style="background-color: #1E3A8A;">
+                            <h3>OMS</h3>
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h4>Organización Mundial de la Salud</h4>
+                            <p>Bioética y regulaciones globales sobre la edición genética en humanos.</p>
+                            <button class="btn-secundario">Ver Matriz</button>
+                        </div>
+                    </div>
+
+                    <!-- TARJETA 2 -->
+                    <div class="tarjeta-comite">
+                        <div class="tarjeta-cabecera" style="background-color: #E11D48;">
+                            <h3>ONU MUJERES</h3>
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h4>Entidad de la ONU para la Igualdad de Género</h4>
+                            <p>Estrategias para la erradicación de la brecha salarial y empoderamiento económico.</p>
+                            <button class="btn-secundario">Ver Matriz</button>
+                        </div>
+                    </div>
+
+                    <!-- TARJETA 3 (Puedes copiar y pegar para agregar más) -->
+                    <div class="tarjeta-comite">
+                        <div class="tarjeta-cabecera" style="background-color: #047857;">
+                            <h3>PNUMA</h3>
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h4>Programa de las Naciones Unidas para el Medio Ambiente</h4>
+                            <p>Transición energética y mitigación del impacto del cambio climático en vías de desarrollo.</p>
+                            <button class="btn-secundario">Ver Matriz</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </section>
