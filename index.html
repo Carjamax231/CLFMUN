@@ -93,7 +93,7 @@
                         <div class="tarjeta-cuerpo">
                             <h4>Comité de Bioética</h4>
                             <p><strong>Tópico:</strong> Creación de Órganos.</p>
-                            <button class="btn-secundario">Ver Matriz</button>
+                            <button class="btn-secundario" onclick="mostrarDetalleComite('bioetica')">Leer Más</button>
                         </div>
                     </div>
 
@@ -105,7 +105,7 @@
                         <div class="tarjeta-cuerpo">
                             <h4>1985 (Histórico)</h4>
                             <p><strong>Tópico:</strong> De la Segunda a la Tercera Revolución Industrial: un Impacto en la vida de la mujer.</p>
-                            <button class="btn-secundario">Ver Matriz</button>
+                            <button class="btn-secundario" onclick="mostrarDetalleComite('onu-mujeres')">Leer Más</button>
                         </div>
                     </div>
 
@@ -117,7 +117,7 @@
                         <div class="tarjeta-cuerpo">
                             <h4>Comité Kids</h4>
                             <p><strong>Tópico:</strong> Plan de Reforma del Sistema Educativo Escolar en Latinoamérica.</p>
-                            <button class="btn-secundario">Ver Matriz</button>
+                            <button class="btn-secundario" onclick="cambiarPestana('kids')">Leer Más</button>
                         </div>
                     </div>
 
@@ -129,7 +129,7 @@
                         <div class="tarjeta-cuerpo">
                             <h4>Comité de Investigación</h4>
                             <p><strong>Caso:</strong> El Escape de Alcatraz de 1962.</p>
-                            <button class="btn-secundario">Ver Matriz</button>
+                            <button class="btn-secundario" onclick="mostrarDetalleComite('fbi')">Leer Más</button>
                         </div>
                     </div>
 
@@ -141,7 +141,7 @@
                         <div class="tarjeta-cuerpo">
                             <h4>Comité en Inglés (2017)</h4>
                             <p><strong>Tópico:</strong> Caso Hipotético - Mandato de Hillary Clinton.</p>
-                            <button class="btn-secundario">Ver Matriz</button>
+                            <button class="btn-secundario" onclick="mostrarDetalleComite('usa-congress')">Leer Más</button>
                         </div>
                     </div>
 
@@ -153,7 +153,7 @@
                         <div class="tarjeta-cuerpo">
                             <h4>Corte Miss Universe</h4>
                             <p><strong>Tópico:</strong> Caso de Raúl Rocha.</p>
-                            <button class="btn-secundario">Ver Matriz</button>
+                            <button class="btn-secundario" onclick="mostrarDetalleComite('miss-universe')">Leer Más</button>
                         </div>
                     </div>
 
@@ -165,7 +165,7 @@
                         <div class="tarjeta-cuerpo">
                             <h4>Crisis Tricameral (Cámara A)</h4>
                             <p><strong>Tópico:</strong> La Reforma Protestante.</p>
-                            <button class="btn-secundario">Ver Matriz</button>
+                            <button class="btn-secundario" onclick="mostrarDetalleComite('crisis-catolica')">Leer Más</button>
                         </div>
                     </div>
 
@@ -177,7 +177,7 @@
                         <div class="tarjeta-cuerpo">
                             <h4>Crisis Tricameral (Cámara B)</h4>
                             <p><strong>Tópico:</strong> La Reforma Protestante.</p>
-                            <button class="btn-secundario">Ver Matriz</button>
+                            <button class="btn-secundario" onclick="mostrarDetalleComite('crisis-luterana')">Leer Más</button>
                         </div>
                     </div>
 
@@ -189,7 +189,7 @@
                         <div class="tarjeta-cuerpo">
                             <h4>Crisis Tricameral (Cámara C)</h4>
                             <p><strong>Tópico:</strong> La Reforma Protestante.</p>
-                            <button class="btn-secundario">Ver Matriz</button>
+                            <button class="btn-secundario" onclick="mostrarDetalleComite('crisis-anglicana')">Leer Más</button>
                         </div>
                     </div>
 
@@ -201,12 +201,35 @@
                         <div class="tarjeta-cuerpo">
                             <h4>Cuerpo de Prensa</h4>
                             <p><strong>Misión:</strong> Cobertura General del Modelo.</p>
-                            <button class="btn-secundario">Ver Matriz</button>
+                            <button class="btn-secundario" onclick="mostrarDetalleComite('prensa')">Leer Más</button>
                         </div>
                     </div>
                 </div>
             </div>
 
+        </section>
+
+        <!-- VISTA: DETALLE DE COMITÉ (PLANTILLA) -->
+        <section id="detalle-comite" class="vista oculto">
+            <div class="contenido-interno detalle-container">
+                <button class="btn-volver" onclick="volverAComites()">&#8592; Volver a Comités</button>
+                
+                <div class="detalle-header">
+                    <h2 id="detalle-titulo" class="titulo-seccion">Título del Comité</h2>
+                    <p id="detalle-topico" class="tagline" style="margin: 0 auto;"><strong>Tópico:</strong> Tópico del comité</p>
+                </div>
+
+                <div class="detalle-imagen-placeholder">
+                    <span>[ Espacio reservado para la imagen del comité ]</span>
+                </div>
+
+                <div class="detalle-contenido">
+                    <h3 id="detalle-frase" class="frase-celebre">"Frase célebre"</h3>
+                    <div id="detalle-descripcion" class="texto-descripcion"></div>
+                    <p id="detalle-modalidad" class="modalidad-texto"></p>
+                    <button class="btn-primario" style="margin-top: 40px;">Descargar Matriz (PDF)</button>
+                </div>
+            </div>
         </section>
 
         <!-- VISTA: KIDS -->
@@ -223,17 +246,24 @@
                     </div>
                 </div>
 
-                <h3 class="titulo-sub-seccion">Comité Asignado</h3>
-                <!-- Reutilizamos la grilla pero la limitamos para centrar una sola tarjeta -->
-                <div class="grid-comites" style="max-width: 400px; margin-top: 30px;">
-                    <div class="tarjeta-comite">
-                        <div class="tarjeta-cabecera" style="background-color: var(--vinotinto);">
-                            <h3>UNESCO</h3>
+                <!-- DETALLE DEL COMITÉ UNESCO DIRECTAMENTE EN LA PÁGINA -->
+                <div class="detalle-container" style="margin-top: 60px;">
+                    <div class="detalle-header">
+                        <h2 class="titulo-seccion">UNESCO (Comité Kids)</h2>
+                        <p class="tagline" style="margin: 0 auto;"><strong>Tópico:</strong> Plan de Reforma del Sistema Educativo Escolar en Latinoamérica.</p>
+                    </div>
+                    <div class="detalle-imagen-placeholder">
+                        <span>[ Espacio reservado para la imagen de UNESCO ]</span>
+                    </div>
+                    <div class="detalle-contenido">
+                        <h3 class="frase-celebre">"No se trata solo de transmitir conocimientos, sino de formar corazones."<br>— San Juan Bosco.</h3>
+                        <div class="texto-descripcion">
+                            <p>Históricamente, la educación en Latinoamérica se construyó sobre el Modelo Napoleónico del siglo XIX. Este sistema nació para la Revolución Industrial y buscaba crear ciudadanos que supieran seguir instrucciones precisas para trabajar en fábricas. Era una educación "estandarizada": todos aprendían lo mismo, al mismo tiempo y de la misma forma.</p>
+                            <p>Este modelo generó grandes brechas. Al ser igual para todos, ignoró las realidades de nuestros campos, de los pueblos indígenas y de las diferencias económicas. En el siglo XX nos enfocamos en que todos supieran leer y escribir, pero nos olvidamos de algo vital: la calidad y el pensamiento crítico.</p>
+                            <p>Al parecer las instituciones educativas de carácter colegial en Latinoamérica fueron diseñadas para un mundo que ya no existe. Cada rincón de Latinoamérica merece la misma excelencia.</p>
                         </div>
-                        <div class="tarjeta-cuerpo">
-                            <h4>Comité Kids</h4>
-                            <p><strong>Tópico:</strong> Plan de Reforma del Sistema Educativo Escolar en Latinoamérica.</p>
-                        </div>
+                        <p class="modalidad-texto"><strong>Modalidad:</strong> Individual.<br><span style="font-size: 0.9rem; text-transform: none; color: var(--gris-oscuro);">Este comité es diseñado para alumnos de 5to de primaria, 6to de primaria y 1er año de bachillerato.</span></p>
+                        <button class="btn-primario" style="margin-top: 40px;">Descargar Matriz Kids (PDF)</button>
                     </div>
                 </div>
             </div>
