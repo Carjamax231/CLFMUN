@@ -141,3 +141,84 @@ body {
     font-size: 3rem;
     margin-bottom: 30px;
 }
+
+/* =========================================
+   TICKER DE PATROCINANTES (MARQUESINA)
+========================================== */
+.patrocinantes-wrapper {
+    margin-top: 60px;
+    width: 100%;
+    padding: 30px 0;
+    background-color: #ffffff; /* Fondo blanco para limpiar el diseño */
+}
+
+.titulo-patrocinantes {
+    font-family: var(--fuente-textos);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gris-oscuro);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    opacity: 0.6;
+}
+
+.ticker-contenedor {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Efecto de difuminado en los bordes izquierdo y derecho */
+.ticker-contenedor::before,
+.ticker-contenedor::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    z-index: 2;
+}
+.ticker-contenedor::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff 0%, transparent 100%);
+}
+.ticker-contenedor::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff 0%, transparent 100%);
+}
+
+.ticker-track {
+    display: inline-flex;
+    gap: 60px; /* Espacio entre logos */
+    padding-right: 60px; /* Mismo espacio para evitar saltos en el bucle */
+    /* Animación: Mueve el bloque a la izquierda infinitamente */
+    animation: scrollTicker 25s linear infinite;
+}
+
+.ticker-track img {
+    height: 50px; /* Altura uniforme para todos los logos */
+    width: auto;
+    object-fit: contain;
+    /* Filtro premium: Grises por defecto, color al hacer hover */
+    filter: grayscale(100%) opacity(0.6); 
+    transition: filter 0.4s ease, transform 0.4s ease;
+    cursor: pointer;
+}
+
+.ticker-track img:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.05);
+}
+
+/* Keyframes para el movimiento continuo */
+@keyframes scrollTicker {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Se desplaza exactamente la mitad (porque el contenido está duplicado) */
+        transform: translateX(-50%);
+    }
+}
