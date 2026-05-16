@@ -102,6 +102,14 @@ const datosComites = {
         descripcion: "<p>El ejercicio periodístico constituye el pilar fundamental de la estructura social, actuando como un faro de integridad y verdad en un entorno saturado de información. Su función trasciende la mera difusión de hechos: el periodista es un custodio de la democracia, encargado de auditar el ejercicio del poder y salvaguardar la transparencia institucional.</p><p>Más que un relator, el corresponsal es un agente de cambio que educa y contextualiza la realidad, fomentando una opinión pública sólida y objetiva.</p><p>Dentro de este comité, asumirás el reto de reportar los acontecimientos en tiempo real, utilizando las plataformas digitales para capturar la esencia y el dinamismo de cada sesión. Tu capacidad para redactar crónicas, reportajes de profundidad y entrevistas exclusivas será lo que humanice la política y las posturas de los delegados.</p>",
         modalidad: "Mixta Individual",
         mesaDirectiva: "<ul><li><strong>Presidente:</strong> Valeska Corobo</li><li><strong>Vicepresidente:</strong> Carla Marín</li></ul>"
+    },
+    "unesco": {
+        titulo: "UNESCO (Comité Kids)",
+        topico: "Plan de Reforma del Sistema Educativo Escolar en Latinoamérica.",
+        frase: '"No se trata solo de transmitir conocimientos, sino de formar corazones." — San Juan Bosco.',
+        descripcion: "<p>Históricamente, la educación en Latinoamérica se construyó sobre el Modelo Napoleónico del siglo XIX. Este sistema nació para la Revolución Industrial y buscaba crear ciudadanos que supieran seguir instrucciones precisas para trabajar en fábricas. Era una educación \"estandarizada\": todos aprendían lo mismo, al mismo tiempo y de la misma forma.</p><p>Este modelo generó grandes brechas. Al ser igual para todos, ignoró las realidades de nuestros campos, de los pueblos indígenas y de las diferencias económicas. En el siglo XX nos enfocamos en que todos supieran leer y escribir, pero nos olvidamos de algo vital: la calidad y el pensamiento crítico.</p><p>Al parecer las instituciones educativas de carácter colegial en Latinoamérica fueron diseñadas para un mundo que ya no existe. Cada rincón de Latinoamérica merece la misma excelencia.</p>",
+        modalidad: "Individual.<br><span style=\"font-size: 0.9rem; text-transform: none; color: var(--gris-oscuro);\">Este comité es diseñado para alumnos de 5to de primaria, 6to de primaria y 1er año de bachillerato.</span>",
+        mesaDirectiva: "<ul><li><strong>Presidente:</strong> Flavia Airasan</li><li><strong>Vicepresidente:</strong> Isabella Seijas</li><li><strong>Asesora Académica:</strong> Maria Fernanda Gonzalez</li></ul>"
     }
 };
 
