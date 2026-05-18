@@ -95,8 +95,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
-    /* Fondo con overlay degradado suave para dejar apreciar la foto de fondo */
-    background: linear-gradient(rgba(136, 9, 8, 0.3), rgba(44, 44, 44, 0.4)), url('../assets/img/virgen-logo.png') center/cover no-repeat;
+    /* Fondo sin overlay para probar la visibilidad de la imagen original */
+    background: url('../assets/img/virgen-logo.png') center/cover no-repeat;
 }
 
 /* =========================================
