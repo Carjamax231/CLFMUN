@@ -197,10 +197,10 @@ body {
 
 .ticker-track {
     display: inline-flex;
-    gap: 60px; /* Espacio entre logos */
+    gap: 55px; /* Espacio entre logos */
     padding-right: 60px; /* Mismo espacio para evitar saltos en el bucle */
     /* Animación: Mueve el bloque a la izquierda infinitamente */
-    animation: scrollTicker 45s linear infinite;
+    animation: scrollTicker 70s linear infinite;
 }
 
 .ticker-item {
