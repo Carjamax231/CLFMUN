@@ -57,6 +57,7 @@ body {
 .logo-nav {
     height: 60px; /* Ajusta según el tamaño de tu logo png */
     width: auto;
+    cursor: pointer; /* Hace que el cursor cambie a una mano indicando que es clickeable */
 }
 
 .nav-links {
@@ -334,7 +335,7 @@ body {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    filter: grayscale(85%) opacity(0.6); 
+    filter: grayscale(80%) opacity(0.6); 
     transition: filter 0.4s ease, transform 0.4s ease;
     cursor: pointer;
 }
