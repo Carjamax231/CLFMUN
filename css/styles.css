@@ -97,7 +97,7 @@ body {
     margin: 0;
     padding: 40px 20px 0 20px; /* Sin padding-bottom para evitar franjas */
     /* Propiedades de fondo separadas para evitar errores de sintaxis en el navegador */
-    background-image: url('../assets/img/virgen-logo.png');
+    background-image: url('../assets/img/virgen-fondo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
