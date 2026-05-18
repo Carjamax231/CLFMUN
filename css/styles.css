@@ -151,7 +151,7 @@ body {
    TICKER DE PATROCINANTES (MARQUESINA)
 ========================================== */
 .patrocinantes-wrapper {
-    margin-top: 40px;
+    margin-top: 37px;
     width: 100%;
     padding: 10px 0;
     background-color: var(--gris-oscuro); /* Fondo oscuro para resaltar logos blancos */
