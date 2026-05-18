@@ -53,3 +53,39 @@ Se aplicaron reglas de diseño responsivo mediante `@media (max-width: 768px)` p
 ## 6. Configuración de Metadatos
 
 *   **Favicon:** Se integró la etiqueta `<link rel="icon" type="image/png" href="...">` en la sección `<head>` del HTML. Este recurso vincula la identidad gráfica del proyecto a la pestaña del navegador web, estandarizando la apariencia institucional del sitio.
+
+## 7. Rediseño del Hero (Arquitectura "Bento Box") y Temporizador Dinámico
+
+Se reemplazó el contenedor introductorio tradicional por una estructura modular de tarjetas asimétricas conocida como "Bento Box", optimizando el espacio para múltiples llamados a la acción (CTAs) y datos clave.
+
+*   **Maquetación Bento Box:** Se implementó un contenedor Flexbox (`.bento-container`) con una separación (`gap`) amplia en resoluciones de escritorio para permitir la visibilidad de la imagen de fondo central. Las tarjetas internas (`.bento-card`) fueron limitadas mediante `max-width` para lograr un diseño compacto y evitar el desbordamiento.
+*   **Lógica del Countdown:** Se desarrolló una función asíncrona en Vanilla JS (`iniciarCountdown`) que utiliza `setInterval` para ejecutarse cada 1000 milisegundos. El algoritmo calcula la diferencia matemática entre el *Timestamp* actual y una fecha objetivo estática, transformando el remanente en días, horas, minutos y segundos antes de inyectarlo en los nodos del DOM correspondientes.
+*   **Seamless UI (Interfaz sin fisuras):** Se ajustaron los márgenes y rellenos (`padding-bottom: 0`, `margin-top: 0`) entre la sección `.hero` y `.patrocinantes-wrapper`, forzando además un `min-height: 85vh` en el Hero. Esto garantiza una colisión perfecta entre el fondo fotográfico y la franja inferior oscura.
+
+## 8. Refactorización del Ticker de Patrocinantes
+
+Se reestructuró el componente de la marquesina para resolver inconsistencias en las proporciones visuales derivadas de las diferentes resoluciones de los logotipos de origen.
+
+*   **Contenedores Flexibles Estrictos:** Se reemplazó la renderización directa de etiquetas `<img>` por contenedores envolventes (`.ticker-item`). A estos contenedores se les asignaron dimensiones explícitas (`width: 150px`, `height: 60px`) y propiedades de alineación de Flexbox (`align-items: center`, `justify-content: center`).
+*   **Normalización de Activos:** A las imágenes internas se les aplicó la propiedad `object-fit: contain` junto con restricciones de ancho y alto máximo del 100%. Esto delega al motor de renderizado del navegador la responsabilidad de escalar el logotipo sin deformarlo, respetando siempre la caja delimitadora del contenedor padre.
+
+## 9. Layout Editorial y Carrusel Scroll-Snap (Sección Kids)
+
+Se diseñó una vista con enfoque en retención de lectura y manipulación táctil nativa.
+
+*   **Arquitectura de Cuadrícula:** El texto introductorio se maquetó utilizando `display: grid` con `grid-template-columns: 1fr 1fr`. Se balanceó el peso visual de los contenedores y se aplicó `text-align: justify` con un `line-height: 1.6` para emular un estilo editorial y reducir la fatiga visual.
+*   **Scroll-Snap Horizontal:** Se implementó un carrusel de imágenes utilizando `display: flex` y `overflow-x: auto`. La fricción y anclaje estilo aplicación nativa se logró mediante la propiedad `scroll-snap-type: x mandatory` en el contenedor padre y `scroll-snap-align: center` en los elementos hijos.
+*   **Ocultamiento de UI Nativa:** Para salvaguardar la estética premium de la interfaz, se ocultó la barra de desplazamiento horizontal nativa de los navegadores utilizando pseudo-elementos específicos del motor WebKit (`::-webkit-scrollbar { display: none; }`) y su equivalente estandarizado (`scrollbar-width: none`).
+
+## 10. Integración de Activos Gráficos y Efectos Premium en Comités
+
+Se dotó de contenido multimedia a la cuadrícula de comités y a las vistas de detalle mediante la extensión del sistema de renderizado dinámico.
+
+*   **Expansión del Modelo de Datos:** Se incorporó una nueva clave `imagen` al objeto maestro JSON (`datosComites`) con la ruta estática de la fotografía correspondiente a cada comité.
+*   **Manipulación del DOM (Imágenes):** En la función `mostrarDetalleComite`, se añadió una línea de ejecución que captura el nodo `#detalle-imagen-comite` y muta dinámicamente el valor de su atributo `src` con base en el comité seleccionado.
+*   **Recorte y Proporción (Object-Fit):** Para evitar distorsiones en imágenes insertadas dentro de contenedores de altura fija, se aplicó `object-fit: cover`. En las tarjetas del catálogo, se sincronizó el radio del borde superior de la imagen (`border-radius: 20px 20px 0 0`) con el contenedor padre para evitar el escape de pixeles en las esquinas.
+*   **Microinteracciones Aceleradas:** Se programó un efecto de escalado interior (`transform: scale(1.05)`) y alteración lumínica (`filter: brightness(1.05)`) en estado `:hover`, proporcionando dinamismo interactivo.
+
+## 11. Refinamientos de Experiencia de Usuario (UX)
+
+*   **Enrutamiento Global:** Se vinculó un evento `onclick` a la clase `.logo-nav` de la barra de navegación superior, apuntando a la función centralizada de enrutamiento SPA (`cambiarPestana('inicio')`). Para indicar la interactividad del elemento, se le asignó la regla CSS `cursor: pointer`.
