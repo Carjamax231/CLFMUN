@@ -41,9 +41,29 @@
         <!-- VISTA: INICIO -->
         <section id="inicio" class="vista">
             <div class="hero">
-                <h1>Agentes del Cambio</h1>
-                <p class="tagline">Formando líderes del mañana a través del debate, la diplomacia y la resolución de conflictos.</p>
-                <button class="btn-primario" onclick="cambiarPestana('comites')">Ver Comités</button>
+                <div class="bento-container">
+                    <!-- Tarjeta Izquierda (Identidad) -->
+                    <div class="bento-card card-identidad">
+                        <img src="assets/img/delegacion-logo.png" alt="Logo Delegación" class="bento-logo">
+                        <p class="bento-lema">"Vocación de trascendencia: liderazgo y verdad en la construcción de un mundo humano."</p>
+                        <div class="bento-botones">
+                            <button class="btn-primario" onclick="cambiarPestana('comites')">Ver Comités</button>
+                            <button class="btn-secundario" onclick="cambiarPestana('nosotras')">Nosotras</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjeta Derecha (Evento) -->
+                    <div class="bento-card card-evento">
+                        <h2 class="bento-fecha">22, 23 y 24 de Mayo</h2>
+                        <div class="countdown">
+                            <div class="countdown-item"><span id="cd-dias">00</span><small>Días</small></div>
+                            <div class="countdown-item"><span id="cd-horas">00</span><small>Horas</small></div>
+                            <div class="countdown-item"><span id="cd-minutos">00</span><small>Minutos</small></div>
+                            <div class="countdown-item"><span id="cd-segundos">00</span><small>Segundos</small></div>
+                        </div>
+                        <a href="https://maps.app.goo.gl/HUHQPnAKSpmzS1VA9" target="_blank" class="btn-invertido">📍 Ver Ubicación</a>
+                    </div>
+                </div>
             </div>
         <!-- ticker de patrocinantes en el inicio -->
         <div class="patrocinantes-wrapper">

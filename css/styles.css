@@ -90,21 +90,132 @@ body {
    PORTADA (HERO)
 ========================================== */
 .hero {
-    height: 80vh;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    /* Fondo con overlay degradado (mezcla de vinotinto y gris oscuro) para legibilidad */
+    background: linear-gradient(rgba(136, 9, 8, 0.7), rgba(44, 44, 44, 0.8)), url('../assets/img/virgen-logo.png') center/cover no-repeat;
+}
+
+/* =========================================
+   BENTO BOX (TARJETAS HERO)
+========================================== */
+.bento-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.bento-card {
+    flex: 1;
+    border-radius: 20px;
+    padding: 50px 30px;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    transition: transform 0.3s ease;
 }
 
-.hero h1 {
+.bento-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Tarjeta Identidad (Izquierda) */
+.card-identidad {
+    background-color: var(--crema);
+}
+
+.bento-logo {
+    max-width: 160px;
+    margin-bottom: 25px;
+}
+
+.bento-lema {
     font-family: var(--fuente-titulos);
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--gris-oscuro);
+    margin-bottom: 35px;
+    line-height: 1.4;
+}
+
+.bento-botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Tarjeta Evento (Derecha) */
+.card-evento {
+    background-color: var(--vinotinto);
+    color: var(--crema);
+}
+
+.bento-fecha {
+    font-family: var(--fuente-titulos);
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+/* Contador Regresivo */
+.countdown {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.countdown-item {
+    background-color: rgba(250, 245, 237, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(250, 245, 237, 0.2);
+}
+
+.countdown-item span {
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-family: var(--fuente-textos);
+    line-height: 1;
+}
+
+.countdown-item small {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+/* Botón Invertido (Para fondos oscuros) */
+.btn-invertido {
+    background-color: var(--crema);
     color: var(--vinotinto);
-    font-size: clamp(3rem, 6vw, 5rem);
-    margin-bottom: 20px;
-    line-height: 1.1;
+    text-decoration: none;
+    padding: 15px 35px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.btn-invertido:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
 }
 
 .tagline {
@@ -489,5 +600,23 @@ body {
 
     .kids-info-box {
         padding: 25px; /* Evita que el texto quede pegado a los bordes */
+    }
+
+    /* 4. Ajustes del Bento Box Mobile */
+    .bento-container {
+        flex-direction: column;
+    }
+    
+    .countdown {
+        gap: 10px;
+    }
+    
+    .countdown-item {
+        min-width: 65px;
+        padding: 10px;
+    }
+    
+    .countdown-item span {
+        font-size: 1.6rem;
     }
 }

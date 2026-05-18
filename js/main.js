@@ -171,3 +171,45 @@ window.addEventListener('scroll', function() {
     }
     ubicacionPrincipal = desplazamientoActual;
 });
+
+/* =========================================
+   COUNTDOWN (TARJETA EVENTO BENTO BOX)
+========================================== */
+function iniciarCountdown() {
+    // Fecha objetivo: 22 de Mayo de 2026 a las 08:00:00
+    const fechaObjetivo = new Date('May 22, 2026 08:00:00').getTime();
+
+    const intervalo = setInterval(() => {
+        const ahora = new Date().getTime();
+        const diferencia = fechaObjetivo - ahora;
+
+        // Cálculos de tiempo matemático
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        // Inyectar en el DOM si los elementos existen (para evitar errores si no están en pantalla)
+        const elDias = document.getElementById('cd-dias');
+        if (elDias) {
+            elDias.innerText = dias < 10 ? '0' + dias : dias;
+            document.getElementById('cd-horas').innerText = horas < 10 ? '0' + horas : horas;
+            document.getElementById('cd-minutos').innerText = minutos < 10 ? '0' + minutos : minutos;
+            document.getElementById('cd-segundos').innerText = segundos < 10 ? '0' + segundos : segundos;
+        }
+
+        // Si se alcanza la fecha objetivo, el contador se planta en cero
+        if (diferencia < 0) {
+            clearInterval(intervalo);
+            if (elDias) {
+                elDias.innerText = "00";
+                document.getElementById('cd-horas').innerText = "00";
+                document.getElementById('cd-minutos').innerText = "00";
+                document.getElementById('cd-segundos').innerText = "00";
+            }
+        }
+    }, 1000);
+}
+
+// Ejecutar cuando el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', iniciarCountdown);
