@@ -465,6 +465,15 @@ body {
     margin-top: 40px;
 }
 
+.desc-daycamp {
+    max-width: 800px;
+    margin: 15px auto 30px auto; /* 15px arriba para separarlo sutilmente del título */
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    color: var(--gris-oscuro);
+}
+
 .scroll-carousel {
     display: flex;
     gap: 20px;
