@@ -95,8 +95,11 @@ body {
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
-    /* Fondo sin overlay para probar la visibilidad de la imagen original */
-    background: url('../assets/img/virgen-logo.png') center/cover no-repeat;
+    /* Propiedades de fondo separadas para evitar errores de sintaxis en el navegador */
+    background-image: url('../assets/img/virgen-logo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* =========================================
