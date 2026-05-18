@@ -547,16 +547,12 @@ body {
     margin-bottom: 40px;
 }
 
-.detalle-imagen-placeholder {
+.imagen-detalle-hero {
     width: 100%;
-    height: 400px;
-    background-color: #eaeaea;
+    height: 450px;
+    object-fit: cover;
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #888;
-    font-style: italic;
+    box-shadow: 0 15px 30px rgba(136, 9, 8, 0.15);
     margin-bottom: 40px;
 }
 
@@ -654,8 +650,8 @@ body {
     }
 
     /* 3. Ajuste de contenedores e imágenes */
-    .detalle-imagen-placeholder {
-        height: 250px; /* Menos alto en celulares */
+    .imagen-detalle-hero {
+        height: 250px; /* Ajuste premium para celulares */
     }
 
     .kids-filosofia {

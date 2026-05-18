@@ -136,6 +136,7 @@ function mostrarDetalleComite(idComite) {
     // 1. Inyectamos los datos en el HTML
     document.getElementById('detalle-titulo').innerText = data.titulo;
     document.getElementById('detalle-topico').innerHTML = `<strong>Tópico:</strong> ${data.topico}`;
+    document.getElementById('detalle-imagen-comite').src = data.imagen;
     document.getElementById('detalle-frase').innerText = data.frase;
     document.getElementById('detalle-descripcion').innerHTML = data.descripcion;
     document.getElementById('detalle-modalidad').innerHTML = `<strong>Modalidad:</strong> ${data.modalidad}`;
