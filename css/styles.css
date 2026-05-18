@@ -319,7 +319,7 @@ body {
     gap: 55px; /* Espacio entre logos */
     padding-right: 60px; /* Mismo espacio para evitar saltos en el bucle */
     /* Animación: Mueve el bloque a la izquierda infinitamente */
-    animation: scrollTicker 80s linear infinite;
+    animation: scrollTicker 65s linear infinite;
 }
 
 .ticker-item {
@@ -334,7 +334,7 @@ body {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    filter: grayscale(100%) opacity(0.6); 
+    filter: grayscale(85%) opacity(0.6); 
     transition: filter 0.4s ease, transform 0.4s ease;
     cursor: pointer;
 }
