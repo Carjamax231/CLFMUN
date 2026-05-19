@@ -408,6 +408,13 @@ body {
     font-family: var(--fuente-titulos);
     font-size: 2rem;
     letter-spacing: 2px;
+    text-align: center;
+    padding: 0 15px; /* Evita que el texto pegue en los bordes si es muy largo */
+}
+
+.tarjeta-cabecera h3 {
+    margin: 0;
+    line-height: 1.2;
 }
 
 .tarjeta-cuerpo {
@@ -771,15 +778,24 @@ body {
     }
     
     .countdown {
-        gap: 10px;
+        gap: 4px;
     }
     
     .countdown-item {
-        padding: 10px 5px;
+        padding: 8px 2px;
     }
     
     .countdown-item span {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
+    }
+
+    .countdown-item small {
+        font-size: 0.65rem;
+    }
+
+    /* Ajuste extra para títulos de los comités en móviles para evitar roturas bruscas */
+    .tarjeta-cabecera h3 {
+        font-size: 1.4rem;
     }
 
     /* 5. Ajustes Sección Biblioteca/Eventos */
