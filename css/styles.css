@@ -616,6 +616,111 @@ body {
 }
 
 /* =========================================
+   SECCIÓN BIBLIOTECA (EVENTOS)
+========================================== */
+.seccion-eventos {
+    width: 100%;
+}
+
+.banner-daycamp {
+    background-color: var(--vinotinto);
+    color: var(--crema);
+    padding: 60px 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 60px;
+    box-shadow: 0px 15px 30px rgba(136, 9, 8, 0.2);
+}
+
+.banner-daycamp h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 2.2rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* Modificador para que el botón se lea sobre el fondo vinotinto */
+.banner-daycamp .btn-secundario {
+    border-color: var(--crema);
+    color: var(--crema);
+    align-self: center;
+}
+
+.banner-daycamp .btn-secundario:hover {
+    background-color: var(--crema);
+    color: var(--vinotinto);
+}
+
+.evento-drill {
+    margin-bottom: 60px;
+}
+
+.desc-evento {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    color: var(--gris-oscuro);
+}
+
+.grid-comites-drill {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+}
+
+.tarjeta-comite-drill {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.tarjeta-comite-drill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 40px rgba(136, 9, 8, 0.15);
+}
+
+.tarjeta-comite-drill img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.tarjeta-comite-drill-contenido {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tarjeta-comite-drill-contenido h4 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    color: var(--vinotinto);
+    margin-bottom: 15px;
+}
+
+.tarjeta-comite-drill-contenido p {
+    font-size: 0.95rem;
+    color: var(--gris-oscuro);
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* =========================================
    OPTIMIZACIÓN MÓVIL (RESPONSIVE DESIGN)
 ========================================== */
 @media (max-width: 768px) {
@@ -674,6 +779,14 @@ body {
     }
     
     .countdown-item span {
+        font-size: 1.6rem;
+    }
+
+    /* 5. Ajustes Sección Biblioteca/Eventos */
+    .banner-daycamp {
+        padding: 40px 20px;
+    }
+    .banner-daycamp h3 {
         font-size: 1.6rem;
     }
 }
