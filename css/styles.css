@@ -445,14 +445,16 @@ body {
     background-color: transparent;
     color: var(--vinotinto);
     border: 2px solid var(--vinotinto);
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 0.9rem;
     font-weight: 600;
-    border-radius: 20px;
+    border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
     align-self: flex-start; /* Alinea el botón a la izquierda */
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-secundario:hover {
@@ -620,6 +622,14 @@ body {
     color: var(--vinotinto);
     font-weight: 600;
     margin-right: 5px;
+}
+
+/* Contenedor de Botones de Descarga en Detalle de Comité */
+.contenedor-botones-comite {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 /* =========================================
