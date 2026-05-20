@@ -738,6 +738,152 @@ body {
 }
 
 /* =========================================
+   SECCIÓN NOSOTRAS (STAFF E IDENTIDAD)
+========================================== */
+.hero-nosotras {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-nosotras p {
+    font-size: 1.1rem;
+    color: var(--gris-oscuro);
+    line-height: 1.8;
+}
+
+.grid-staff {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.tarjeta-miembro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta-miembro img,
+.avatar-fantasma {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+.avatar-fantasma {
+    background-color: var(--crema);
+    border: 2px solid var(--vinotinto);
+    color: var(--vinotinto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+}
+
+.tarjeta-miembro h4 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+    color: var(--vinotinto);
+    margin: 0 0 5px 0;
+}
+
+.tarjeta-miembro p {
+    font-size: 0.9rem;
+    color: var(--gris-oscuro);
+    opacity: 0.8;
+    font-weight: 500;
+    margin: 0;
+}
+
+.bento-nosotras {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.bento-item-nosotras {
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.bento-item-nosotras.fondo-vinotinto {
+    background-color: var(--vinotinto);
+    color: var(--crema);
+}
+
+.bento-item-nosotras.fondo-vinotinto h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.bento-item-nosotras.fondo-crema {
+    background-color: #ffffff;
+    color: var(--gris-oscuro);
+}
+
+.bento-item-nosotras.fondo-crema h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    color: var(--vinotinto);
+    margin-bottom: 10px;
+}
+
+.subtitulo-bento {
+    font-family: var(--fuente-textos);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gris-oscuro);
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.bento-item-nosotras p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.bento-item-nosotras p:last-child {
+    margin-bottom: 0;
+}
+
+.cita-final-nosotras {
+    margin: 80px auto 40px auto;
+    text-align: center;
+    max-width: 800px;
+}
+
+.cita-final-nosotras blockquote {
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--vinotinto);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.cita-final-nosotras cite {
+    font-family: var(--fuente-textos);
+    font-size: 1.1rem;
+    color: var(--gris-oscuro);
+    font-weight: 600;
+}
+
+/* =========================================
    OPTIMIZACIÓN MÓVIL (RESPONSIVE DESIGN)
 ========================================== */
 @media (max-width: 768px) {
@@ -814,5 +960,16 @@ body {
     }
     .banner-daycamp h3 {
         font-size: 1.6rem;
+    }
+
+    /* 6. Ajustes Sección Nosotras */
+    .bento-nosotras {
+        grid-template-columns: 1fr;
+    }
+    .bento-item-nosotras {
+        padding: 30px 20px;
+    }
+    .cita-final-nosotras blockquote {
+        font-size: 1.4rem;
     }
 }
